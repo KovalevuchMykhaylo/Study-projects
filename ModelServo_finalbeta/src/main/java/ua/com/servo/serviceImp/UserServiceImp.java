@@ -153,12 +153,12 @@ public class UserServiceImp implements UserService, UserDetailsService{
 				new Authenticator() {
 					protected PasswordAuthentication getPasswordAuthentication() {
 						return new PasswordAuthentication(
-								"kovalevuch.c.h@gmail.com", "idkfaiddqd");
+								"USEREMAIL", "PASSWORD");
 					}
 				});
 		try {
 			MimeMessage message = new MimeMessage(session);
-			message.setFrom(new InternetAddress("kovalevuch.c.h@gmail.com"));
+			message.setFrom(new InternetAddress("USEREMAIL"));
 			message.addRecipient(Message.RecipientType.TO, new InternetAddress(
 					email));
 			message.setSubject(content, "UTF-8");
