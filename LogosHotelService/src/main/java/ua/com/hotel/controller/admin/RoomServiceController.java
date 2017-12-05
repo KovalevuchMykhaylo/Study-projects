@@ -97,7 +97,7 @@ public class RoomServiceController {
 	}
 	
 	@PostMapping
-	public String save(@ModelAttribute ("roomService") @Valid RoomServiceForm roomServiceForm, BindingResult br, Model model, SessionStatus status, @PageableDefault Pageable pageable, @ModelAttribute("filter") RoomServiceFilter filter) {
+	public String save(@ModelAttribute ("roomService") RoomServiceForm roomServiceForm, BindingResult br, Model model, SessionStatus status, @PageableDefault Pageable pageable, @ModelAttribute("filter") RoomServiceFilter filter) {
 		if(br.hasErrors())return show(model, pageable, filter);
 		roomServiceService.save(roomServiceForm);
 		status.setComplete();

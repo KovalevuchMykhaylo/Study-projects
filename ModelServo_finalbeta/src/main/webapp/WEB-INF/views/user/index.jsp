@@ -6,7 +6,7 @@
 <%@ taglib uri="/WEB-INF/custom.tld" prefix="custom"%>
 <label style=color:red><h3> To buy you need to register!!!</h3></label>
 <div class="row">
-	<div class="col-md-3 col-xs-12">
+	<div class="col-md-2 col-xs-12">
 		<form:form class="form-inline" action="/admin/modelServo" method="GET" modelAttribute="filter">
 			<custom:hiddenInputs excludeParams="min, max, forceShaft, poverVoltage, gearType, rotationAngle, speedRotation, search,
 			 _forceShaftIds, _poverVoltageIds, _gearTypeIds, _rotationAngleIds, _speedRotationIds"/>
@@ -29,8 +29,7 @@
 			</div>
 		</form:form>
 	</div>
-	</div>
-		<div class="col-md-7 col-xs-12 parent">
+		<div class="col-md-8 col-xs-12 parent">
 		<c:forEach items="${page.content}" var="modelServo">
 			<div>
 			<custom:hiddenInputs excludeParams="name, price"/>
@@ -69,8 +68,10 @@
 				</div>
 			</div>
 		</div>
-	<div class="col-md-12 col-xs-12 text-center">
-		<custom:pageable page="${page}" cell="<li></li>" container="<ul class='pagination'></ul>" />
+	<div class="row">
+		<div class="col-md-12 col-xs-12 text-center">
+			<custom:pageable page="${page}" cell="<li></li>" container="<ul class='pagination'></ul>" />
+		</div>
 	</div>
 <script>
 	$('label').each(function() {

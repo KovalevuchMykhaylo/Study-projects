@@ -38,7 +38,7 @@ public class RoomServiceValidator implements Validator{
 		if(!REG1.matcher(form.getRoomNumber()).matches() ){
 			errors.rejectValue("roomNumber", "", "Write only numbers");
 		}
-		if(errors.getFieldError("price")==null & (errors.getFieldError("room")==null) & (errors.getFieldError("roomNumber")==null)){
+		if(errors.getFieldError("price")==null && (errors.getFieldError("room")==null) && (errors.getFieldError("roomNumber")==null)){
 			ValidationUtils.rejectIfEmptyOrWhitespace(errors, "price", "", "Can't be empty");
 			ValidationUtils.rejectIfEmptyOrWhitespace(errors, "room", "", "Can't be empty");
 			ValidationUtils.rejectIfEmptyOrWhitespace(errors, "roomNumber", "", "Can't be empty");

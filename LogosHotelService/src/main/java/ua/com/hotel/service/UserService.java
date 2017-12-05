@@ -26,5 +26,5 @@ public interface UserService {
 	Page <User> findAll(Pageable pageable, UserFilter filter);
 	
 	public void sendMail(String content, String email, String mailBody);
-
+	
 }

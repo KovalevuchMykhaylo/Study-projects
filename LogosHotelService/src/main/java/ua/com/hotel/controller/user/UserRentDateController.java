@@ -92,7 +92,6 @@ public class UserRentDateController {
 		status.setComplete();
 		return "redirect:/roomService/"+id;
 	}
-	
 	public static Long getSignedUpUser() {
 		final SecurityContext ctx = SecurityContextHolder.getContext();
 
